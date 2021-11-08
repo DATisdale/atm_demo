@@ -25,7 +25,7 @@ function accessATM(currentAtmPin) {
     if (validatePin.validatePin(userInput)==true){
       mainMenu()
     }else{
-      alert("Access Denieds")
+      alert("Access Denied")
     }
   }
   
