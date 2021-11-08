@@ -23,7 +23,9 @@ function accessATM(currentAtmPin) {
   else if (userInput!=currentAtmPin){
     userInput=prompt("Please Enter Correct Pin")
     if (validatePin.validatePin(userInput)==true){
-      alert("Acces Denied")
+      mainMenu()
+    }else{
+      alert("Access Denieds")
     }
   }
   
@@ -34,7 +36,7 @@ accessATM(validatePin)
 //TODO: Call accessATM function
 function mainMenu() {
 let chooseToContinue =true
-let numberPrompt=(1)
+let numberPrompt
 let userInput 
   while (chooseToContinue==true) {
     
