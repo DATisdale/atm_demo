@@ -1,4 +1,6 @@
 "use strict";
+const prompt = require("prompt-sync")();
+const {currentAtmPin, currentBalance} = require("./account")
 //TODO: Import necessary values from account.js
 
 function getBalance() {
@@ -16,6 +18,7 @@ function deposit(depositAmount) {
 }
 
 function validatePin(enteredPin) {
+  
   //TODO: Check if entered pin matches account.js pin
   //Allow access to ATM if matching
   //Return value should be a Boolean (true or false)
@@ -23,3 +26,10 @@ function validatePin(enteredPin) {
 }
 
 //TODO: Export these functions
+
+module.exports = {
+  getBalance: getBalance,
+  withdraw: withdraw,
+  deposit: deposit,
+  validatePin: validatePin
+}

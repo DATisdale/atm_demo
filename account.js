@@ -5,3 +5,14 @@
 //TODO: Create variables for account balance & account pin
 
 //Export these variables
+const currentAtmPin = 4108
+
+let currentBalance = 3000
+
+
+
+
+module.exports = {
+    currentAtmPin: currentAtmPin,
+    currentBalance: currentBalance
+};
