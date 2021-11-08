@@ -11,19 +11,25 @@ function getBalance() {
 function withdraw(withdrawAmount) {
 
   currentBalance-=parseInt(withdrawAmount)
-  console.log('The new balance is ${currentBalance}');
+  console.log(`The new balance is ${currentBalance}`);
   //TODO: withdraw amount from current acct. balance
   // Log the current balance after withdrawal is made
 }
 
 function deposit(depositAmount) {
   currentBalance+=parseInt(depositAmount)
+  console.log(`The new balance is ${currentBalance}`)
   //TODO: deposit amount to current acct. balance
   // Log the current balance after deposit is made
 }
 
 function validatePin(enteredPin) {
-  
+  if(parseInt(enteredPin)===currentAtmPin){
+    return true
+  }
+  else{
+    return false
+  }
   //TODO: Check if entered pin matches account.js pin
   //Allow access to ATM if matching
   //Return value should be a Boolean (true or false)
@@ -36,5 +42,6 @@ module.exports = {
   getBalance: getBalance,
   withdraw: withdraw,
   deposit: deposit,
-  validatePin: validatePin
-}
+  validatePin: validatePin,
+};
+
