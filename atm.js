@@ -1,18 +1,23 @@
 "use strict";
 const prompt = require("prompt-sync")();
-const {currentAtmPin, currentBalance} = require("./account")
+let {currentAtmPin, currentBalance} = require("./account")
 //TODO: Import necessary values from account.js
 
 function getBalance() {
+  return currentBalance
   //TODO: Return the customer's acct. balance
 }
 
 function withdraw(withdrawAmount) {
+
+  currentBalance-=parseInt(withdrawAmount)
+  console.log('The new balance is ${currentBalance}');
   //TODO: withdraw amount from current acct. balance
   // Log the current balance after withdrawal is made
 }
 
 function deposit(depositAmount) {
+  currentBalance+=parseInt(depositAmount)
   //TODO: deposit amount to current acct. balance
   // Log the current balance after deposit is made
 }
