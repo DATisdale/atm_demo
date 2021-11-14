@@ -39,8 +39,12 @@ let chooseToContinue =true
 let numberPrompt
 let userInput 
   while (chooseToContinue==true) {
-    
-    numberPrompt=prompt("Main Menu, please chose an option \n press 1 for Balance \n Press 2 for Withdrawl \n Press 3 for Deposit \n Press 4 To Return Card and Exit")
+    console.log("Main Menu, please choose an option ")
+    console.log("Press 1 for Balance")
+    console.log("press 2 for Withdrawl")
+    console.log("Press 3 for Deposit")
+
+    numberPrompt=prompt("Press 4 To Return Card and Exit")
 if(numberPrompt==1){
     
     console.log(getBalance.getBalance())
